@@ -1,16 +1,11 @@
 Dado('Um usuário Player Normal de Valorant') do
-    options = Selenium::WebDriver::Chrome::Options.new
-    options.add_argument('start-maximized')
-    driver = Selenium::WebDriver.for :chrome, options: options
-
-    siteExplorado = "https://playvalorant.com/pt-br/"
-    driver.navigate.to siteExplorado
+    usuario = "Player"
 end
   
 Quando('Acessar a página Home') do
-    pending # Write code here that turns the phrase above into concrete actions
+    @home.irParaPagina()
 end
   
-Então('Encontrará o texto {string}') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+Então('Encontrará a breve descrição do jogo') do 
+    expect(@home.text_homeDesc.text).to eql "Um jogo de tiro tático 5x5 com personagens originais"
 end

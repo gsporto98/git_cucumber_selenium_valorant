@@ -8,4 +8,4 @@ Para: Validar os caminhos possíveis
 Cenario: Acessando a página do Valorant
 Dado Um usuário Player Normal de Valorant
 Quando Acessar a página Home 
-Então Encontrará o texto "Um jogo de tiro tático 5x5 com personagens originais"
+Então Encontrará a breve descrição do jogo
