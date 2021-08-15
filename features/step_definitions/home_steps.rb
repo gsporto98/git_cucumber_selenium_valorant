@@ -11,9 +11,10 @@
     Quando('acessar a página Home') do
         @home.irParaPagina()
     end
-  
-    Quando('trocar o idiomar para o Inglês') do
-        @home.trocarIdioma("English (NA)")
+
+    Quando('trocar o idioma para o {string}') do |idioma|
+        sleep 3
+        @home.trocarIdioma(idioma)
     end
 
 # end
