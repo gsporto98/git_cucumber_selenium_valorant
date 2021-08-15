@@ -1,6 +1,6 @@
 require_relative "../env.rb"
 
-class HomePage
+class BasePage
 
     attr_accessor :driver
     def initialize(webDriver)
@@ -116,7 +116,11 @@ class HomePage
         end
 
         def btnIcon_idioma()
-            self.driver.find_element(:css, "#riotbar-right-content > div._1K9T69nrXajaz_b4HNuhtI.riotbar-locale-switcher > div > a")
+            self.driver.find_element(:css, "#riotbar-right-content .lang-switch-trigger")
+        end
+
+        def box_idioma()
+            self.driver.find_element(:css, ".locale-list")
         end
 
         def btn_jogueAgora()
@@ -127,12 +131,15 @@ class HomePage
             self.driver.find_element(:css, "#gatsby-focus-wrapper > section.section.dark.HomeHero-module--homeHero--1drYm.in-view > div.sectionWrapper.border-left.HomeHero-module--sectionWrapper--3hTRk > button > div > span.PrimaryButton-module--label-text--23ce5")
         end
 
- 
     # end
 
     # Métodos
-        
-    # end
 
+        def trocarIdioma(escolha)
+            btnIcon_idioma.click
+            box_idioma.find_element(:xpath, "//*[contains(text(),'#{escolha}')]").click
+        end
+
+    # end
 
 end

@@ -1,11 +1,32 @@
-Dado('Um usuário Player Normal de Valorant') do
-    usuario = "Player"
-end
+# Dado
+
+    Dado('um usuário Player Normal de Valorant') do
+        usuario = "Player"
+    end
+
+# end
   
-Quando('Acessar a página Home') do
-    @home.irParaPagina()
-end
+# Quando
+    
+    Quando('acessar a página Home') do
+        @home.irParaPagina()
+    end
   
-Então('Encontrará a breve descrição do jogo') do 
-    expect(@home.text_homeDesc.text).to eql "Um jogo de tiro tático 5x5 com personagens originais"
-end
+    Quando('trocar o idiomar para o Inglês') do
+        @home.trocarIdioma("English (NA)")
+    end
+
+# end
+    
+# Então  
+    
+    Então('encontrará a breve descrição do jogo') do    
+        expect(@home.text_homeDesc.text).to eql "Um jogo de tiro tático 5x5 com personagens originais"
+    end
+  
+  
+    Então('a descrição modificada do jogo será {string}') do |texto|
+        expect(@home.text_homeDesc.text).to eql texto
+    end
+
+# end

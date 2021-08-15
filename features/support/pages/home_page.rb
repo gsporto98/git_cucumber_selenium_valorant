@@ -1,6 +1,6 @@
 require_relative "../env.rb"
 
-class HomePage
+class HomePage < BasePage
 
     attr_accessor :driver
     def initialize(webDriver)
@@ -9,17 +9,17 @@ class HomePage
 
     # Mapeamento
 
-    def text_homeDesc()
-        self.driver.find_element(:css, ".HomeHero-module--description--2Ua8u")
-    end
+        def text_homeDesc()
+            self.driver.find_element(:css, ".HomeHero-module--description--2Ua8u")
+        end
     
     # end
 
     # Métodos
-    def irParaPagina()
-        @driver.navigate.to "https://playvalorant.com/pt-br/"
 
-    end
+        def irParaPagina()
+            @driver.navigate.to "https://playvalorant.com/pt-br/"
+        end
 
     # end
 
