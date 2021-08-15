@@ -132,11 +132,7 @@ class HomePage
     # end
 
     # Métodos
-        def irParaPagina()
-            @driver.navigate.to "https://playvalorant.com/pt-br/"
-
-        end
-
+        
     # end
 
 end
