@@ -127,8 +127,7 @@ class HomePage
             self.driver.find_element(:css, "#gatsby-focus-wrapper > section.section.dark.HomeHero-module--homeHero--1drYm.in-view > div.sectionWrapper.border-left.HomeHero-module--sectionWrapper--3hTRk > button > div > span.PrimaryButton-module--label-text--23ce5")
         end
 
-
-        
+ 
     # end
 
     # Métodos
