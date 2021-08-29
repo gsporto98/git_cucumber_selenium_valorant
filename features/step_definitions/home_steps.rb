@@ -18,11 +18,22 @@
     end
 
     Quando('o usuário scrollar até o texto {string}') do |string|
-        binding.pry
         @home.scrollToText(texto)
     end
+
+    Quando('clicar no botão titulo do texto da homepage {string}') do |string|
+        pending # Write code here that turns the phrase above into concrete actions
+    end
+    
+    Quando('clicar no link do texto da homepage {string}') do |string|
+        pending # Write code here that turns the phrase above into concrete actions
+    end
       
-    Quando('clicar no botão para acessar o Seus Agentes') do
+    Quando('clicar na opção {string} do cabeçalho') do |string|
+        pending # Write code here that turns the phrase above into concrete actions
+    end
+      
+    Quando('clicar na subOpção <suOpcao> do cabeçalho') do
         pending # Write code here that turns the phrase above into concrete actions
     end
 
@@ -40,6 +51,34 @@
     end
 
     Então('será redirecionado para a página agentes') do
+        pending # Write code here that turns the phrase above into concrete actions
+    end
+
+    Então('encontrará a breve descrição sobre SEUS AGENTES') do
+        pending # Write code here that turns the phrase above into concrete actions
+    end
+
+    Então('encontrará a breve descrição sobre SEUS MAPAS') do
+        pending # Write code here that turns the phrase above into concrete actions
+    end
+      
+    Então('será redirecionado para a página mapas') do
+        pending # Write code here that turns the phrase above into concrete actions
+    end
+      
+    Então('encontrará a breve descrição sobre NÓS SOMOS VALORANT') do
+        pending # Write code here that turns the phrase above into concrete actions
+    end
+
+    Então('abrirá o trailer do jogo') do
+        pending # Write code here that turns the phrase above into concrete actions
+    end
+      
+    Então('será redirecionado para a página notícias') do
+        pending # Write code here that turns the phrase above into concrete actions
+    end
+
+    Então('a descrição inicial do redirecionamento será {string}') do |string|
         pending # Write code here that turns the phrase above into concrete actions
     end
 

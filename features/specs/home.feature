@@ -5,38 +5,38 @@ Como: Um visitante
 Quero: Percorrer os fluxos da página inicial
 Para: Validar os caminhos possíveis
 
-Contexto: Acessando com um usuário Default a página do Valorant
-Dado um usuário Player Normal de Valorant
-Quando acessar a página Home 
+# Contexto: Acessando com um usuário Default a página do Valorant
+# Dado um usuário Player Normal de Valorant
+# Quando acessar a página Home 
 
 @home
 Cenario: Validando minimamente a pagina home
 Então encontrará a breve descrição do jogo
 
-@tradutores
-Esquema do Cenario: Validando a funcionalidade de idiomas
-Quando trocar o idioma para o <idioma> 
-Então a descrição modificada do jogo será <textoCorrespondente>
-Exemplos: 
-|   idioma            | textoCorrespondente                                                      |
-|   "English (NA)"    | "A 5v5 character-based tactical shooter"                                 |
-|   "English (EUW)" | "A 5v5 character-based tactical shooter"                                   |
-|   "Deutsch"         | "Ein charakterbasierter taktischer 5-gegen-5-Shooter"                    |
-|   "Español (EUW)"   | "Un shooter táctico 5v5 basado en personajes"                            |
-|   "Français"        | "Un jeu de tir tactique avec personnages en 5c5"                         |
-|   "Italiano"        | "Uno sparatutto tattico 5 vs 5 basato sui personaggi"                    |
-|   "Polski"          | "Taktyczna strzelanka 5 na 5 oparta na postaciach"                       |
-|   "Русский"         | "Тактический шутер с матчами 5 на 5 и уникальными персонажами"           |
-|   "Türkçe"          | "5'e 5, karakter tabanlı, taktiksel nişancılık oyunu"                    |
-|   "Español (LATAM)" | "Un juego de disparos táctico 5v5 basado en personajes."                 |
-|   "Indonesian"      | "Game tembak-menembak taktis berbasis karakter 5v5"                      |
-|   "日本語"           | "キャラクターベースの 5v5 タクティカルシューター"                            |
-|   "한국어"           | "5대5 캐릭터 기반 전술 슈팅 게임"                                          |
-|   "Português"       | "Um jogo de tiro tático 5x5 com personagens originais"                   |
-| "ภาษาไทย"          | "เกมยิงปืนในรูปแบบ 5v5 ที่ขับเคลื่อนโดยเหล่าเอเจนท์ผู้มากความสามารถ"                  |
-| "Tiếng Việt"        | "Một tựa game bắn súng chiến thuật 5 đấu 5 lấy các nhân vật làm nền tảng" |
-| "繁體中文"          | "以角色為核心的5對5戰略射擊遊戲"                                             |
-| "العربية"                   | "لعبة تصويب تكتيكي تعتمد على الشخصيات بنمط 5v5"               |
+#@tradutores
+#Esquema do Cenario: Validando a funcionalidade de idiomas
+#Quando trocar o idioma para o <idioma> 
+#Então a descrição modificada do jogo será <textoCorrespondente>
+#Exemplos: 
+#|   idioma            | textoCorrespondente                                                      |
+#|   "English (NA)"    | "A 5v5 character-based tactical shooter"                                 |
+#|   "English (EUW)" | "A 5v5 character-based tactical shooter"                                   |
+#|   "Deutsch"         | "Ein charakterbasierter taktischer 5-gegen-5-Shooter"                    |
+#|   "Español (EUW)"   | "Un shooter táctico 5v5 basado en personajes"                            |
+#|   "Français"        | "Un jeu de tir tactique avec personnages en 5c5"                         |
+#|   "Italiano"        | "Uno sparatutto tattico 5 vs 5 basato sui personaggi"                    |
+#|   "Polski"          | "Taktyczna strzelanka 5 na 5 oparta na postaciach"                       |
+#|   "Русский"         | "Тактический шутер с матчами 5 на 5 и уникальными персонажами"           |
+#|   "Türkçe"          | "5'e 5, karakter tabanlı, taktiksel nişancılık oyunu"                    |
+#|   "Español (LATAM)" | "Un juego de disparos táctico 5v5 basado en personajes."                 |
+#|   "Indonesian"      | "Game tembak-menembak taktis berbasis karakter 5v5"                      |
+#|   "日本語"           | "キャラクターベースの 5v5 タクティカルシューター"                            |
+#|   "한국어"           | "5대5 캐릭터 기반 전술 슈팅 게임"                                          |
+#|   "Português"       | "Um jogo de tiro tático 5x5 com personagens originais"                   |
+#| "ภาษาไทย"          | "เกมยิงปืนในรูปแบบ 5v5 ที่ขับเคลื่อนโดยเหล่าเอเจนท์ผู้มากความสามารถ"                  |
+#| "Tiếng Việt"        | "Một tựa game bắn súng chiến thuật 5 đấu 5 lấy các nhân vật làm nền tảng" |
+#| "繁體中文"          | "以角色為核心的5對5戰略射擊遊戲"                                             |
+#| "العربية"                   | "لعبة تصويب تكتيكي تعتمد على الشخصيات بنمط 5v5"               |
 
 @home_seusAgentes_info
 Cenario: Validando informações de SEUS AGENTES na pagina home
@@ -77,16 +77,75 @@ Quando o usuário scrollar até o texto "ÚLTIMAS NOTÍCIAS"
 E clicar no botão titulo do texto da homepage "IR PARA A PÁGINA DE NOTÍCIAS"
 Então será redirecionado para a página notícias
 
-@home_redirecionadores
+@home_redirecionadores_posIcone
 Esquema do Cenario: Validando as redirecionadas das opções do cabeçalho
-Quando clicar na opção <opcao> do cabeçalho
+Quando clicar na opção "RIOTGAMES" do cabeçalho
+Quando clicar na subOpção <suOpcao> do cabeçalho
 Então a descrição inicial do redirecionamento será <textoCorrespondente>
 Exemplos:
-| opcao       | textoCorrespondente |
-| "botaoA"    | "abcd"              |
-| "botaoA"    | "abcd"              |
-| "botaoA"    | "abcd"              |
-| "botaoA"    | "abcd"              |
-| "botaoA"    | "abcd"              |
-| "botaoA"    | "abcd"              |
+| opcao         | textoCorrespondente |
+| "LOR"         | "abcd"              |
+| "TFT"         | "abcd"              |
+| "LOR2"        | "abcd"              |
+| "WildRift"    | "abcd"              |
+| "Valorant"    | "abcd"              |
+
+@home_redirecionadores_posInfo
+Esquema do Cenario: Validando as redirecionadas das opções do cabeçalho
+Quando clicar na opção "INFORMAÇÕES DO JOGO" do cabeçalho
+Quando clicar na subOpção <suOpcao> do cabeçalho
+Então a descrição inicial do redirecionamento será <textoCorrespondente>
+Exemplos:
+| opcao        | textoCorrespondente |
+| "AGENTES"    | "abcd"              |
+| "MAPAS"      | "abcd"              |
+| "ARSENAL"    | "abcd"              |
+
+@home_redirecionadores_posSuporte
+Esquema do Cenario: Validando as redirecionadas das opções do cabeçalho
+Quando clicar na opção "SUPORTE" do cabeçalho
+Quando clicar na subOpção <suOpcao> do cabeçalho
+Então a descrição inicial do redirecionamento será <textoCorrespondente>
+Exemplos:
+| opcao                     | textoCorrespondente |
+| "REQUISITOS"              | "abcd"              |
+| "SUPORTE"                 | "abcd"              |
+| "CODIGO DA COMUNIDADE"    | "abcd"              |
+
+@home_redirecionadores_posSocial
+Esquema do Cenario: Validando as redirecionadas das opções do cabeçalho
+Quando clicar na opção "SOCIAL" do cabeçalho
+Quando clicar na subOpção <suOpcao> do cabeçalho
+Então a descrição inicial do redirecionamento será <textoCorrespondente>
+Exemplos:
+| opcao          | textoCorrespondente |
+| "FACEBOOK"     | "abcd"              |
+| "YOUTUBE"      | "abcd"              |
+| "INSTAGRAM"    | "abcd"              |
+| "TWITTER"      | "abcd"              |
+
+@home_redirecionadores_posComunidade
+Esquema do Cenario: Validando as redirecionadas das opções do cabeçalho
+Quando clicar na opção "COMUNIDADE" do cabeçalho
+Quando clicar na subOpção <suOpcao> do cabeçalho
+Então a descrição inicial do redirecionamento será <textoCorrespondente>
+Exemplos:
+| opcao                                           | textoCorrespondente |
+| "DISCORD"                                       | "abcd"              |
+| "FORUM"                                         | "abcd"              |
+| "GRUPO DO FACEBOOK"                             | "abcd"              |
+| "TORNEIOS DA COMUNIDADE"                        | "abcd"              |
+| "PROGRAMA DE APOIO A TORNEIOS DA COMUNIDADE"    | "abcd"              |
+
+@home_redirecionadores
+Esquema do Cenario: Validando as redirecionadas das opções do cabeçalho
+Quando clicar na subOpção <suOpcao> do cabeçalho
+Então a descrição inicial do redirecionamento será <textoCorrespondente>
+Exemplos:
+| opcao              | textoCorrespondente |
+| "MÍDIA"            | "abcd"              |
+| "NOTÍCIAS"         | "abcd"              |
+| "PLACAR"           | "abcd"              |
+| "ESPORTS"          | "abcd"              |
+| "JOGUE AGORA"          | "abcd"              |
 
