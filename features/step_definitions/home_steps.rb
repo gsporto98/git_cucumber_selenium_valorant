@@ -21,12 +21,12 @@
         @home.scrollToText(texto)
     end
 
-    Quando('clicar no botão titulo do texto da homepage {string}') do |string|
-        pending # Write code here that turns the phrase above into concrete actions
+    Quando('clicar no botão na homepage referente ao texto {string}') do |string|
+        @home.clicarBotao(texto)
     end
     
-    Quando('clicar no link do texto da homepage {string}') do |string|
-        pending # Write code here that turns the phrase above into concrete actions
+    Quando('clicar no link na homepage referente ao texto {string}') do |string|
+        @home.clicarLink(texto)
     end
       
     Quando('clicar na opção {string} do cabeçalho') do |string|

@@ -5,9 +5,9 @@ Como: Um visitante
 Quero: Percorrer os fluxos da página inicial
 Para: Validar os caminhos possíveis
 
-# Contexto: Acessando com um usuário Default a página do Valorant
-# Dado um usuário Player Normal de Valorant
-# Quando acessar a página Home 
+Contexto: Acessando com um usuário Default a página do Valorant
+Dado um usuário Player Normal de Valorant
+Quando acessar a página Home 
 
 @home
 Cenario: Validando minimamente a pagina home
@@ -46,7 +46,7 @@ Então encontrará a breve descrição sobre SEUS AGENTES
 @home_seusAgentes_botao
 Cenario: Validando o botão SEUS AGENTES na pagina home
 Quando o usuário scrollar até o texto "SEUS AGENTES"
-E clicar no botão titulo do texto da homepage "VER TODOS OS AGENTES"  
+E clicar no botão na homepage referente ao texto "VER TODOS OS AGENTES"  
 Então será redirecionado para a página agentes
 
 @home_seusMapas_info
@@ -57,7 +57,7 @@ Então encontrará a breve descrição sobre SEUS MAPAS
 @home_seusMapas_Botao
 Cenario: Validando o botão SEUS MAPAS na pagina home
 Quando o usuário scrollar até o texto "SEUS MAPAS"
-E clicar no botão titulo do texto da homepage "VER TODOS OS MAPAS"
+E clicar no botão na homepage referente ao texto "VER TODOS OS MAPAS"
 Então será redirecionado para a página mapas
 
 @home_nosSomosValorant_info
@@ -68,13 +68,13 @@ Então encontrará a breve descrição sobre NÓS SOMOS VALORANT
 @home_trailer_link
 Cenario: Validando o link trailer na pagina home
 Quando o usuário scrollar até o texto "NÓS SOMOS VALORANT"
-E clicar no link do texto da homepage "Assista ao trailer da mecânica de jogo aqui."
+E clicar no link na homepage referente ao texto "Assista ao trailer da mecânica de jogo aqui."
 Então abrirá o trailer do jogo
 
 @home_ultimasNoticias_botao
 Cenario: Validando o botão ÚLTIMAS NOTÍCIAS
 Quando o usuário scrollar até o texto "ÚLTIMAS NOTÍCIAS"
-E clicar no botão titulo do texto da homepage "IR PARA A PÁGINA DE NOTÍCIAS"
+E clicar no botão na homepage referente ao texto "IR PARA A PÁGINA DE NOTÍCIAS"
 Então será redirecionado para a página notícias
 
 @home_redirecionadores_posIcone
