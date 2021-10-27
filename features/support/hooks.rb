@@ -6,6 +6,7 @@ Before do
     @wait = Selenium::WebDriver::Wait.new(:timout => 10)
 
     @home = HomePage.new(@driver)
+    @base = BasePage.new(@driver)
 end
 
 # After sem uma tag executa antes de todos os cenários

@@ -65,7 +65,7 @@ class BasePage
             self.driver.find_element(:css, "#riotbar-center-content > div._2Jx8cIlm63mjPBNcz3mjwO.riotbar-desktop-navigation-wrapper > div:nth-child(5) > a > ul > li:nth-child(3) > a")
         end
 
-        def comboboxSocial()
+        def combobox_Social()
             self.driver.find_element(:css, "#riotbar-center-content > div._2Jx8cIlm63mjPBNcz3mjwO.riotbar-desktop-navigation-wrapper > div:nth-child(6) > a")
         end
 
@@ -140,6 +140,73 @@ class BasePage
             box_idioma.find_element(:xpath, "//*[contains(text(),'#{escolha}')]").click
         end
 
+        def clicarCabecalho(selecionar)
+            
+            sleep 10
+
+            case selecionar
+                when "ICONE"
+                    btnIcon_riot.click
+
+                when "MIDIA"
+                    btn_midia.click
+                
+                when "NOTICIAS"
+                    btn_noticias.click
+
+                when "PLACAR"
+                    btn_placar.click
+                
+                when "INFORMAÇOES DO JOGO"
+                    combobox_InformacoesDoJogo.click
+
+                when "SUPORTE"
+                    combobox_suporte.click
+                
+                when "SOCIAL"
+                    combobox_Social.click
+
+                when "ESPORTS"
+                    btn_esports.click
+                    changeToTab(1)
+                
+                when "COMUNIDADE"
+                    combobox_comunidade.click
+
+                when "FACEBOOK"
+                    select_facebook.click
+                    changeToTab(1)
+                
+                when "INSTAGRAM"
+                    select_instagram.click
+                    changeToTab(1)
+
+                when "YOUTUBE"
+                    select_youtube.click
+                    changeToTab(1)
+                
+                when "REQUISITOS"
+                    select_requisitos.click
+
+                when "DISCORD"
+                    select_discord.click
+                    changeToTab(1)
+
+                when "AGENTES"
+                    select_agentes.click
+
+                else 
+                    puts "Qualquer outra coisa"
+            end
+
+            sleep 10
+
+        end
+
+    # end
+
+    # Métodos Especiais
+
         def scrollDownBy(yValue)
             self.driver.execute_script("window.scrollBy(0, #{yValue});")
         end
@@ -157,8 +224,11 @@ class BasePage
             self.driver.execute_script("arguments[0].scrollIntoView(true);", elemento)
         end
 
-    # end
+        def changeToTab(tab)
+            driver.switch_to().window(driver.window_handles[tab])
+        end
 
+    # end
 
 
 end

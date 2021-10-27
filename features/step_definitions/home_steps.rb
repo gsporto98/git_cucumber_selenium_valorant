@@ -10,6 +10,7 @@
     
     Quando('acessar a página Home') do
         @home.irParaPagina()
+        sleep 10
     end
 
     Quando('trocar o idioma para o {string}') do |idioma|
